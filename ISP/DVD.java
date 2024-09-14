@@ -17,6 +17,7 @@ public class DVD extends LibraryItem implements Streamable{
     public void generateReport(){
         super.generateReport(); // 부모 메서드 호출
         System.out.print(", director: " + this.director + ", duration: " + this.duration);
+        stream();
     }
     // 인터페이스 구현, pdf에 멤버 변수가 설정 되어 있지 않아 따로 작성하지 않았음.
     @Override

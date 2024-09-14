@@ -1,9 +1,9 @@
-package ISP;
+package OCP;
 
 public class MainTest {
-    // ISP - Interface Segregation Principle
-	// 한 클래스는 자신이 사용하지않는 인터페이스는 구현하지 말아야 한다. 
-	// 하나의 일반적인 인터페이스보다 여러개의 구체적인 인터페이스가 낫다.
+    // OCP - Open Close Principle
+	// 확장에는 열려 있고, 변경에는 닫혀 있다.
+	// 기존코드를 변경하지 않으면서(closed), 기능을 추가할 수 있도록(open) 설계되어야한다.
     public MainTest() {
         LibraryItem[] items1 = { 
             new Book("The Little Prince", "Antoine Marie Jean-Baptiste Roger de Saint-Exupéry"),
@@ -20,6 +20,5 @@ public class MainTest {
             item.generateReport();
         }
 
-        
     }
 }

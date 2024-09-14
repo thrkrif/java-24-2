@@ -10,10 +10,8 @@ public class CD extends LibraryItem{
         //TODO Auto-generated constructor stub
     }
 
-    // 메서드 오버라이딩
-    @Override
+    
     public void generateReport(){
-        super.generateReport(); // 부모 메서드 호출
-        System.out.println(", artist: " + this.artist);
+        System.out.println("Title: " + super.title + ", artist: " + this.artist);
     }
 }

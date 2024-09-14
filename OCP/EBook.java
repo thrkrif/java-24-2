@@ -12,6 +12,7 @@ public class EBook extends Book{
     @Override
     public void generateReport(){
         super.generateReport(); // 부모 메서드 호출
+        download();
     }
     
     public void download(){

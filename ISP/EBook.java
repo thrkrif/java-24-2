@@ -15,6 +15,7 @@ public class EBook extends LibraryItem implements Downloadable{
     public void generateReport(){
         super.generateReport(); // 부모 메서드 호출
         System.out.print(", artist: " + this.artist);
+        download();
     }
     // 인터페이스 구현, pdf에 멤버 변수가 설정 되어 있지 않아 따로 작성하지 않았음.
     @Override
