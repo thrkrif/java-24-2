@@ -1,5 +1,5 @@
 package ISP;
 
-public interface IReportGenerator {
+public interface ReportGenerator {
     void generateReport();
 }

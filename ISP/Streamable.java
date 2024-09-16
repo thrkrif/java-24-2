@@ -1,5 +1,5 @@
 package ISP;
 
-public interface IStreamable {
+public interface Streamable {
     void stream();
 }

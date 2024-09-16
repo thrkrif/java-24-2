@@ -1,4 +1,4 @@
-package ISP;
+package DIP;
 
 public class DVD extends LibraryItem implements Streamable{
     private String director;

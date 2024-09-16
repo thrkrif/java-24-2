@@ -1,5 +1,5 @@
 package ISP;
 
-public interface IDownloadable {
+public interface Downloadable {
     void download();
 }

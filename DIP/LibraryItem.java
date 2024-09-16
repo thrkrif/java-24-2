@@ -1,4 +1,4 @@
-package ISP;
+package DIP;
 public class LibraryItem implements ReportGenerator{
     private String title;
     

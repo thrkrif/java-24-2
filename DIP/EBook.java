@@ -1,4 +1,4 @@
-package ISP;
+package DIP;
 
 public class EBook extends LibraryItem implements Downloadable{
     private String artist;
