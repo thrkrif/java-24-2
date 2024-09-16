@@ -6,15 +6,20 @@ public class DVD extends LibraryItem{
 
 
     public DVD(String title, String director, int duration) {
-        super(title);   // 부모 생성자 호출
+        this.title = title;   // 부모 생성자 호출
         this.director = director;
         this.duration = duration;
         //TODO Auto-generated constructor stub
     }
 
+    @Override
     public void generateReport(){
-        System.out.print("Title: " + super.title + ", director: " + this.director + ", duration: " + this.duration);
+        generateReportDVD();
         stream();
+    }
+
+    public void generateReportDVD(){
+        System.out.print("Title: " + this.title + ", director: " + this.director + ", duration: " + this.duration);
     }
     
     public void stream(){

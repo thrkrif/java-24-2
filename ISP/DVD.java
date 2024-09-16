@@ -1,6 +1,6 @@
 package ISP;
 
-public class DVD extends LibraryItem implements Streamable{
+public class DVD extends LibraryItem implements IStreamable{
     private String director;
     private int duration;
 

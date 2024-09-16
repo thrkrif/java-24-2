@@ -7,15 +7,16 @@ public class MainTest {
     //업캐스팅 해도 문제 없도록 하는것이다. → 업캐스팅 상태에서 부모 메서드를 이용해도 문제가 없어야한다.
     public MainTest() {
         
-        Book item1 = new Book("The Little Prince", "Antoine Marie Jean-Baptiste Roger de Saint-Exupéry");
-        CD item2 = new CD("We Are the World", "Roger Emerson, Michael Jackson, Lionel Richie");
-        DVD item3 = new DVD("Star Wars: A New Hope", "George Lucas", 120);
-        EBook item4 = new EBook("Onepiece", "EIICHIRO ODA");
-            
-        item1.generateReport();
-        item2.generateReport();
-        item3.generateReport();
-        item4.generateReport();
+        LibraryItem[] items1 = { 
+            new Book("The Little Prince", "Antoine Marie Jean-Baptiste Roger de Saint-Exupéry"),
+            new CD("We Are the World", "Roger Emerson, Michael Jackson, Lionel Richie"),
+            new DVD("Star Wars: A New Hope", "George Lucas", 120),
+            new EBook("Onepiece", "EIICHIRO ODA")
+        };
+        
+        for (LibraryItem item : items1) {
+            item.generateReport(); // upcasting
+        }
 
     }
 }

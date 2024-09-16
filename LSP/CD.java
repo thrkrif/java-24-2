@@ -10,8 +10,13 @@ public class CD extends LibraryItem{
         //TODO Auto-generated constructor stub
     }
 
-    
+    @Override
     public void generateReport(){
-        System.out.println("Title: " + super.title + ", artist: " + this.artist);
+        super.generateReport();
+        CDgenerateReport();
+    }
+
+    public void CDgenerateReport(){
+        System.out.println(", artist: " + this.artist);
     }
 }

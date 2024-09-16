@@ -12,8 +12,14 @@ public class DVD extends LibraryItem{
         //TODO Auto-generated constructor stub
     }
 
+    @Override
     public void generateReport(){
-        System.out.print("Title: " + super.title + ", director: " + this.director + ", duration: " + this.duration);
+        super.generateReport();
+        DVDgenerateReport();
+    }
+
+    public void DVDgenerateReport(){
+        System.out.print(", director: " + this.director + ", duration: " + this.duration);
         stream();
     }
     

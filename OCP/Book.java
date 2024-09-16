@@ -1,16 +1,21 @@
 package OCP;
 
 public class Book extends LibraryItem{
-    private String author;
+    protected String author;
 
 
     public Book(String title, String author) {
-        super(title);   // 부모 생성자 호출
+        this.title = title;
         this.author = author;
         //TODO Auto-generated constructor stub
     }
 
+    @Override
     public void generateReport(){
-        System.out.println("Title: " + super.title + ", author: " + this.author);
+        generateReportBook();
+    }
+
+    public void generateReportBook(){
+        System.out.println("Title: " + this.title + ", author: " + this.author);
     }
 }

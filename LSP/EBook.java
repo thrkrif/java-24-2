@@ -8,8 +8,13 @@ public class EBook extends Book{
         //TODO Auto-generated constructor stub
     }
 
+    @Override
     public void generateReport(){
-        System.out.print("Title: " + super.title + ", author: " + super.author);
+        EBookgenerateReport();
+    }
+
+    public void EBookgenerateReport(){
+        System.out.print("Title: " +  this.title + ", author: " + this.author);
         download();
     }
     

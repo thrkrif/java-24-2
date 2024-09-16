@@ -2,13 +2,13 @@ package SRP;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Library implements ReportGenerator{
+public class Library{
     private List<LibraryItem> items;
-    private CheckoutManager manager;
+    private CheckoutManager checkoutManager;
 
     public Library() {
         this.items = new ArrayList<>();
-        this.manager = new CheckoutManager();
+        this.checkoutManager = new CheckoutManager();
     }
 
     public void addItem(LibraryItem item) {
@@ -16,18 +16,20 @@ public class Library implements ReportGenerator{
     }
 
     public void checkOutItem(LibraryItem item) {
-        item.checkOut();
+        checkoutManager.checkOut(item);
     }
 
     public void returnItem(LibraryItem item) {
-        item.returnItem();
+        checkoutManager.returnItem(item);
     }
 
-    // Library에서 generateReport 메서드를 구현했다.
+    // 도서 목록과 현재 도서 대출의 상태를 출력한다.
     public void generateReport() {
         System.out.println("Library generateReport");
         for (LibraryItem item : items) {
-            System.out.println("Title: " + item.getTitle());;
+            item.generateReport();
+            System.out.println(", checkoutStatus: " + checkoutManager.isCheckedOut(item));
         }
     }
+
 }

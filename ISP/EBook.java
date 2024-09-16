@@ -1,6 +1,6 @@
 package ISP;
 
-public class EBook extends LibraryItem implements Downloadable{
+public class EBook extends LibraryItem implements IDownloadable{
     private String artist;
 
 
@@ -17,7 +17,7 @@ public class EBook extends LibraryItem implements Downloadable{
         System.out.print(", artist: " + this.artist);
         download();
     }
-    // 인터페이스 구현, pdf에 멤버 변수가 설정 되어 있지 않아 따로 작성하지 않았음.
+    // 인터페이스 구현
     @Override
     public void download(){
         System.out.println(", download: True");

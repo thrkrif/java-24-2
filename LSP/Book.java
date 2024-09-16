@@ -10,7 +10,15 @@ public class Book extends LibraryItem{
         //TODO Auto-generated constructor stub
     }
 
+    @Override
     public void generateReport(){
-        System.out.println("Title: " + super.title + ", author: " + this.author);
+        super.generateReport();
+        BookgenerateReport();
     }
+
+    public void BookgenerateReport(){
+        System.out.println(", author: " + this.author); 
+    }
+
+
 }

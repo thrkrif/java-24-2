@@ -1,5 +1,5 @@
 package ISP;
-public class LibraryItem implements ReportGenerator{
+public class LibraryItem implements IReportGenerator{
     private String title;
     
 
@@ -7,6 +7,9 @@ public class LibraryItem implements ReportGenerator{
         this.title = title;
     }
 
+
+    // 인터페이스 구현
+    @Override
     public void generateReport() {
         System.out.print("Title: " + title);
     }
