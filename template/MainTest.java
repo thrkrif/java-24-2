@@ -18,5 +18,8 @@ public class MainTest {
         library1.generateReport();
         library1.returnItem(items1[1]);
         library1.generateReport();
+
+        // 레포지토리 제대로 추가된 거 맞아?
+        
     }
 }
